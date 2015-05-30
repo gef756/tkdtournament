@@ -14,7 +14,7 @@
   <!-- end #header --></div>
   <div id="mainContent">
     <h1> Penn Taekwondo Tournament&gt;Index</h1>
-    <h2>Outputs</h2>
+    <h2 id="outputs">Outputs</h2>
     <ul>
       <li><a href="screen.php">screen</a></li>
       <li><a href="screen2.php">screen2</a></li>
@@ -24,7 +24,7 @@
       <li><a href="showStandings.php">showStandings</a></li>
       <li><a href="showWinners.php">showWinners</a></li>
     </ul>
-    <h2>Admin</h2>
+    <h2 id="inputs">Admin</h2>
     <p>Do not go here unless you are told to. I will bitch-slap you.</p>
     <ul><li><a href="updQueue.php">updQueue</a></li>
       <li><a href="updWinners.php">updWinners</a></li>
@@ -37,7 +37,7 @@
       <li><a href="downloads/FileFormatConverters.exe">Office 2007 Converter Pack</a></li>
       <li>TCPFile (<a href="downloads/tcpfile-setup-windows-0.3.6.exe">windows setup</a>) (<a href="downloads/tcpfile-full-0.3.6-java1.6.zip">zip</a>) (<a href="downloads/tcpfile-lite-0.3.6-java1.6.zip">zip lite</a>)
         <ul>
-          <li>Use PHP Server: <?php echo $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"]."/tcpfile.php"; ?></li>
+          <li>Use PHP Server: <?php echo $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"]."/tcpfile.php"; ?> </li>
         </ul>
       </li>
       <li>JRE 1.6 U13 (<a href="downloads/jre-6u13-windows-i586-p-s.exe">windows</a>) (<a href="downloads/jre-6u13-linux-i586-rpm.bin">linux RPM</a>)</li>

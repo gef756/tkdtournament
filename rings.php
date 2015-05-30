@@ -124,6 +124,8 @@ function printRingInfo($ringNo, $TKDDB){
         <td colspan="2"><p class="ringName">Ring 6</p>
 <?php echo printRingInfo(6, $TKDDB); ?></td>
       </tr>
+      <td colspan="6" style="column-count: 3;"><p class="ringName">Holding Area</p>
+      <?php echo printRingInfo(7, $TKDDB); ?></td>
     </table>
     <!-- end #mainContent --></div>
   <div id="footer">
