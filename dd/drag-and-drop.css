@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul.sortableList{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	width: 405px;
+}
+
+ul.sortableList li{
+	cursor: move;
+	padding: 2px 2px;
+	margin: 2px 0px;
+	border: 1px solid #00cc00;
+	background-color: #f4fff5;
+}
+#trash{
+	border: 4px solid #f00;
+	width: 270px;
+	padding: 10px;
+	float: right;
+		vertical-align: center;
+	text-align: center;
+	font-weight: bold;
+}
+
+#complete{
+	border: 4px solid #f90;
+	width: 270px;
+	padding: 10px;
+	float: left;
+		vertical-align: center;
+	text-align: center;
+	font-weight: bold;
+	}
+.ringDrop{
+	border: 4px solid #011f5b;
+	vertical-align: center;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+	margin-top: auto;
+	position:relative;
+}
+#ring0Drop {
+	width: 300px;
+	}

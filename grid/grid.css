@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+td.right{
+	color: darkblue;
+	text-align: right;
+	width: 125px;
+}
+
+td.left{
+	color: darkblue;
+	text-align: left;
+	width; 125px;
+}
+
+table.list{
+	border: black 1px solid;
+}
+
+th{
+	text-align: left;
+	background-color: navy;
+	color: white;
+}
+
+input.editName{
+	border: black 1px solid;
+	width: 300px;
+}

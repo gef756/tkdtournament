@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-	font: 100% Georgia, "Times New Roman", Times, serif;
+	font: small Verdana, Arial, Helvetica, sans-serif;
 	background: #000;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	padding: 0;
@@ -72,6 +72,22 @@ text-align: center;
 padding: 2px 10px;
 margin: 2px 0px 0px 0px;
 }
+.chungDeck{
+background: #77e;
+color: #eee;
+font-weight: bold;
+text-align: center;
+padding: 2px 10px;
+margin: 2px 0px 0px 0px;
+}
+.chungDDeck{
+background: #aaaaee;
+color: #eee;
+font-weight: bold;
+text-align: center;
+padding: 2px 10px;
+margin: 2px 0px 0px 0px;
+}
 
 .vs{
 margin: 0px;
@@ -86,10 +102,163 @@ text-align: center;
 padding: 2px 10px;
 margin: 2px 0px 0px 0px;
 }
+.hongDeck{
+background: #c77;
+color: #eee;
+font-weight: bold;
+text-align: center;
+padding: 2px 10px;
+margin: 2px 0px 0px 0px;
+}
+.hongDDeck{
+background: #caa;
+color: #eee;
+font-weight: bold;
+text-align: center;
+padding: 2px 10px;
+margin: 2px 0px 0px 0px;
+}
 
 .eventName{
 font-weight: bold;
 text-align: center;
 margin: 2px 0px 0px 0px;
 font-size: x-large;
+}
+#ringInfoTable{
+	font-size: 115%;
+	border: 3px solid black;
+	}
+#ringInfoTable td{
+	border: 1px solid black;
+	}
+.ringTitle{
+	text-align: center;
+	font-weight: bold;
+	font-size: larger;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-top: 0;
+}
+#ringQueueTable{
+	vertical-align: top;
+	border: 4px solid black;
+	border-collapse:collapse;
+	}
+	#ringQueueTable td{
+	vertical-align: top;
+	border: 1px solid black;
+	margin: 0px;
+	padding: 3px;
+	}
+.clearFloat{
+clear: both;
+}
+
+#ringQueueTable .eventDisp td{
+	padding: 1px;
+}
+
+
+li .eventDisp{
+	font-size: small;
+	border-collapse: collapse;
+	border: 2px solid black;
+	padding: 1px;
+	background-color: #ffd591;
+}
+li .eventDisp td{
+	padding: 1px;
+	font-size: smaller;
+		border: 1px solid black;
+}
+li  .eventDisp .chung{
+	background: #0000CC;
+color: #eee;
+font-weight: bold;
+text-align: center;
+	width: 180px;
+	font-size: smaller;
+	}
+	
+li .eventDisp .hong{
+	background: #cc0000;
+color: #eee;
+font-weight: bold;
+text-align: center;
+	width: 180px;
+	font-size: smaller;
+	}
+.eventDisp .eventID{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 120%;
+	padding: 4px;
+	text-align: center;
+}
+
+.eventDisp .bracketID{
+	text-align: center;
+	font-weight: bold;
+}
+.eventDisp .wClass{
+	text-align: right;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+.eventDisp .nextBracket{
+	text-align: right;
+}
+
+.eventDisp .score{
+	text-align: center;
+	width: 20px;
+	font-weight: bold;
+}
+.cBack {
+	background: #00c;
+	color: #eee;
+}
+.hBack {
+	background: #c00;
+	color: #eee;
+}
+
+.eventDisp .compName{
+	text-align: center;
+	min-width: 150px;
+}
+
+.eventDisp input{
+	background: transparent;
+	border: 0px;
+	font-size: smaller;
+	text-align: center;
+}
+.eventDisp .chung input{
+	color: #eee;
+	font-weight: bold;
+	}
+	
+.eventDisp .hong input{
+	color: #eee;
+	font-weight: bold;
+	}
+h1{
+	font-size: 1.2em;
+	}
+h2{
+	font-size: 1.1em;
+	}
+	
+.ringControl{
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	min-width: 300px;
+}
+
+.ringControl .eventDisp{
+
+font-size: 150%;
+
 }

@@ -29,14 +29,14 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 function getRingArr($ringVal, $TKDDB){
-$database_TKDDB = "penntournament09";
+$database_TKDDB = "penntournament10";
 	mysql_select_db($database_TKDDB, $TKDDB);
-	$query_Ring1Res = "SELECT * FROM rings WHERE ringNo = $ringVal AND completed=0 ORDER BY queueNo ASC LIMIT 3";
+	$query_Ring1Res = "SELECT ringNo, queueNo,chung,hong,completed,comments FROM rings WHERE ringNo = $ringVal AND completed=0 ORDER BY queueNo ASC LIMIT 3";
 	$RingRes = mysql_query($query_Ring1Res, $TKDDB) or die(mysql_error());
 	return $RingRes;
 }
 
-function printEvInfo($chung, $hong){
+function printEvInfo($chung, $hong, $pri){
 
 	if (!isset($hong) || ($hong == "")){
 		//Poomsae Event: Only show Chung, No Formatting
@@ -44,9 +44,9 @@ function printEvInfo($chung, $hong){
 	}
 	else {
 		//Sparring Event
-		echo '<p class="chung">'.$chung.'</p>';
+		echo '<p class="chung'.$pri.'">'.$chung.'</p>';
 		/*echo '<p class="vs"> vs. </p>';*/
-		echo '<p class="hong">'.$hong.'</p>';
+		echo '<p class="hong'.$pri.'">'.$hong.'</p>';
 	}
 }
 function printRingInfo($ringNo, $TKDDB){
@@ -55,7 +55,7 @@ function printRingInfo($ringNo, $TKDDB){
 	  $totalRows_Ring1Res = mysql_num_rows($Ring1Res);
 		if ($totalRows_Ring1Res > 0) { // Show if recordset not empty 
            echo '<p class="secTitle">Up Now: </p>';
-		   printEvInfo($row_Ring1Res['chung'],$row_Ring1Res['hong']);
+		   printEvInfo($row_Ring1Res['chung'],$row_Ring1Res['hong'],'');
 		} // Show if recordset not empty
           
 
@@ -63,14 +63,14 @@ function printRingInfo($ringNo, $TKDDB){
 		  if ($totalRows_Ring1Res > 1) { // Show if recordset not empty 
            echo '<p class="secTitle">On Deck: </p>';
 		   		  $row_Ring1Res = mysql_fetch_assoc($Ring1Res);
-				  printEvInfo($row_Ring1Res['chung'],$row_Ring1Res['hong']);
+				  printEvInfo($row_Ring1Res['chung'],$row_Ring1Res['hong'],'Deck');
 		   echo '</p>';      } // Show if recordset not empty
           
 		//Double Deck
 		  if ($totalRows_Ring1Res > 2) { // Show if recordset not empty
            echo '<p class="secTitle">Double Deck: </p>';
 		   		  $row_Ring1Res = mysql_fetch_assoc($Ring1Res);
-				  printEvInfo($row_Ring1Res['chung'],$row_Ring1Res['hong']);
+				  printEvInfo($row_Ring1Res['chung'],$row_Ring1Res['hong'],'DDeck');
 		   echo '</p>';      } // Show if recordset not empty
                     
 		 if ($totalRows_Ring1Res == 0) { // Show if recordset empty
@@ -105,26 +105,29 @@ function printRingInfo($ringNo, $TKDDB){
   <!-- end #header --></div>
   <div id="mainContent">
     <h1 align="center" class="style1">Ring Information</h1>
-    <table width="100%" border="1" cellpadding="5px">
+    <table id="ringInfoTable" width="100%" border="1" cellpadding="5px">
       <tr>
-        <td colspan="3"><p class="ringName">Ring 1</p><?php echo printRingInfo(1, $TKDDB); ?></td>
+        <td colspan="2"><p class="ringName">Ring 1</p><?php echo printRingInfo(1, $TKDDB); ?></td>
 
 
   
-        <td colspan="3"><p class="ringName">Ring 2</p><?php echo printRingInfo(2, $TKDDB); ?></td>
-      </tr>
-      <tr>
+        <td colspan="2"><p class="ringName">Ring 2</p><?php echo printRingInfo(2, $TKDDB); ?></td>
         <td colspan="2"><p class="ringName">Ring 3</p>
 <?php echo printRingInfo(3, $TKDDB); ?></td>
+      </tr>
+      <tr>
+
         <td colspan="2"><p class="ringName">Ring 4</p>
 <?php echo printRingInfo(4, $TKDDB); ?></td>
         <td colspan="2"><p class="ringName">Ring 5</p>
 <?php echo printRingInfo(5, $TKDDB); ?></td>
+        <td colspan="2"><p class="ringName">Ring 6</p>
+<?php echo printRingInfo(6, $TKDDB); ?></td>
       </tr>
     </table>
     <!-- end #mainContent --></div>
   <div id="footer">
-    <p align="center">&copy; 2009 UPenn WTF Taekwondo</p>
+    <p align="center">&copy; 2010 UPenn WTF Taekwondo</p>
   <!-- end #footer --></div>
 <!-- end #container --></div>
 </body>

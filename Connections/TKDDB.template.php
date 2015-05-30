@@ -11,4 +11,9 @@ $database_TKDDB = "fill_in_db_name_here";
 $username_TKDDB = "fill_in_db_username_here";
 $password_TKDDB = "fill_in_db_password_here";
 $TKDDB = mysql_pconnect($hostname_TKDDB, $username_TKDDB, $password_TKDDB) or trigger_error(mysql_error(),E_USER_ERROR);
+define('ROWS_PER_VIEW', 10);
+define('hostname_TKDDB',$hostname_TKDDB);
+define('database_TKDDB', $database_TKDDB);
+define('username_TKDDB',$username_TKDDB);
+define('password_TKDDB',$password_TKDDB);
 ?>
